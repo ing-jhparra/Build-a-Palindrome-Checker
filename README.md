@@ -82,7 +82,7 @@ Build an app that is functionally similar to https://palindrome-checker.freecode
     ```
 
 
-    La función JavaScript forma parte de una página HTML donde se muestra  el cálculo del promedio de calificaciones. La página incluye dos ejemplos prácticos de su ejecución con diferentes conjuntos de datos. El ejercicio puede verlo en linea dando clic [aquí](https://palindromo-snx.pages.dev/) y en este repositorio se encuentra incluido el código.
+    La función JavaScript forma parte de una página HTML donde se muestra la verificación si es o nó palindromo una palabra o frase. La página incluye una vista donde se introduce la palabra o frase y un botón donde luego aparece el mensaje. El ejercicio puede verlo en linea dando clic [aquí](https://palindromo-snx.pages.dev/) y en este repositorio se encuentra incluido el código.
 
  ## El Autor
 
