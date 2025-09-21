@@ -82,7 +82,7 @@ Build an app that is functionally similar to https://palindrome-checker.freecode
     ```
 
 
-    La función JavaScript forma parte de una página HTML donde se muestra  el cálculo del promedio de calificaciones. La página incluye dos ejemplos prácticos de su ejecución con diferentes conjuntos de datos. El ejercicio puede verlo en linea dando clic [aquí](https://promedios.pages.dev/) y en este repositorio se encuentra incluido el código en index.html.
+    La función JavaScript forma parte de una página HTML donde se muestra  el cálculo del promedio de calificaciones. La página incluye dos ejemplos prácticos de su ejecución con diferentes conjuntos de datos. El ejercicio puede verlo en linea dando clic [aquí](https://palindromo-snx.pages.dev/) y en este repositorio se encuentra incluido el código.
 
  ## El Autor
 
