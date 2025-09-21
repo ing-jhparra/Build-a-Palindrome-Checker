@@ -1,4 +1,4 @@
-El siguiente proyecto del curso [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/) en FreeCodeCamp es para cumplir el requisito de optar por el curso : 
+Proyecto del curso [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/) de la plataforma FreeCodeCamp.
 
 ### Aprende ethereum de la mano de Ethkipu & Henry
 
@@ -12,7 +12,7 @@ Note: You'll need to remove all non-alphanumeric characters (punctuation, spaces
 
 * Objective: Build an app that is functionally similar to https://palindrome-checker.freecodecamp.rocks.
 
-* User Stories:
+- User Stories:
 
     1. You should have an input element with an id of "text-input".
     2. You should have a button element with an id of "check-btn".
@@ -32,7 +32,7 @@ Note: You'll need to remove all non-alphanumeric characters (punctuation, spaces
     16. When the #text-input element contains the text 0_0 (: /-\ :) 0-0 and the #check-btn element is clicked, the #result element should contain the text 0_0 (: /-\ :) 0-0 is a palindrome.
     17 When the #text-input element contains the text five|\_/|four and the #check-btn element is clicked, the #result element should contain the text five|\_/|four is not a palindrome.
 
-    ## La funcion Javascript
+    ## La función Javascript
 
     ```javascript
         const textInput = document.getElementById('text-input');
@@ -85,6 +85,7 @@ Note: You'll need to remove all non-alphanumeric characters (punctuation, spaces
 
     La función JavaScript forma parte de una página HTML donde se muestra  el cálculo del promedio de calificaciones. La página incluye dos ejemplos prácticos de su ejecución con diferentes conjuntos de datos. El ejercicio puede verlo en linea dando clic [aquí](https://promedios.pages.dev/) y en este repositorio se encuentra incluido el código en index.html.
 
+ ## El Autor
 
 | [<img src="https://avatars.githubusercontent.com/u/123877201?v=4" width=115><br><sub>Jesus H. Parra B.</sub>](https://github.com/ing-jhparra)
 | :---: |
