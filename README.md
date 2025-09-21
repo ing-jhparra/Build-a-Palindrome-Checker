@@ -1,6 +1,9 @@
 Proyecto del curso [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/) de la plataforma [FreeCodeCamp](https://www.freecodecamp.org/)
 
-# El proyecto
+<div align="center">
+  <h3>Palíndromo</h3>
+  <img src="palindromo.jpg" alt="Palíndromo" width="300">
+</div>
 
 # Build a Palindrome Checker
 
