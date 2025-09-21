@@ -2,7 +2,7 @@ Proyecto del curso [JavaScript Algorithms and Data Structures](https://www.freec
 
 # El proyecto
 
-# Build-a-Palindrome-Checker
+# Build a Palindrome Checker
 
 A palindrome is a word or phrase that can be read the same way forwards and backwards, ignoring punctuation, case, and spacing.
 
