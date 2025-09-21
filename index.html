@@ -212,17 +212,14 @@
             }
         }
 
-        // Add event listeners
         checkBtn.addEventListener('click', validarPalindrome);
 
-        // Allow Enter key to trigger check
         textInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 validarPalindrome();
             }
         });
 
-        // Focus on input when page loads
         window.addEventListener('load', function() {
             textInput.focus();
         });
