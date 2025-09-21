@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palíndromos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #079aad 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #718096;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        #text-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            background: #f7fafc;
+        }
+
+        #text-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            background: #fff;
+        }
+
+        #check-btn {
+            background: linear-gradient(135deg, #079aad 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        #check-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        #check-btn:active {
+            transform: translateY(0);
+        }
+
+        #result {
+            margin-top: 1.5 rem;
+            padding: 1rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .palindrome {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            animation: slideIn 0.5s ease;
+        }
+
+        .not-palindrome {
+            background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+            color: white;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .example {
+            margin-top: 0rem;
+            padding: 0rem;
+            background: #f0f4f7;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: #4a5568;
+            text-align: left;
+        }
+
+        .example-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔄 Verificador de palíndromos</h1>
+        <p class="subtitle">
+            ¡Introduce una palabra o frase para comprobar si se lee igual de adelante hacia atrás y de atrás hacia adelante!
+        </p>
+        
+        <div class="input-group">
+            <input 
+                type="text" 
+                id="text-input" 
+                placeholder="Introducir el texto..."
+                autocomplete="off"
+            >
+        </div>
+        
+        <button id="check-btn">Verificar</button>
+        
+        <div id="result"></div>
+        
+        <div class="example">
+            <div class="example-title">Intente con estas palabras o frases:</div>
+            <div>1. A man, a plan, a canal, Panama</div>
+            <div>2. A, eye, _eye, race car</div>
+            <div>3. never odd or even</div>
+            <div>4. nope</div>
+            <div>5. almostomla</div>
+            <div>6. 1 eye for of 1 eye</div>
+            <div>7. 0_0</div>
+            <div>8. five|\_/|four</div>
+            <div>9. My age is 0</div>
+        </div>
+    </div>
+
+    <script>
+        const textInput = document.getElementById('text-input');
+        const checkBtn = document.getElementById('check-btn');
+        const result = document.getElementById('result');
+
+        function esPalindrome(str) {
+          
+            // Limpiamos la entrada de signos de puntuación, espacios y simbolos y convertimos a minúsculas
+            const strLimpio = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+            const strAlreves = strLimpio.split('').reverse().join('');
+
+            return strLimpio === strAlreves;
+        }
+
+        function validarPalindrome() {
+            
+            // Eliminar espacios al inicio y final del texto
+            const inputValue = textInput.value.trim();
+            
+            if (!inputValue) {
+                alert('Introducir un valor...');
+                return;
+            }
+            
+            result.className = '';
+            
+            if (esPalindrome(inputValue)) {
+                result.textContent = `${inputValue} es un palíndromo`;
+                result.classList.add('palindrome');
+            } else {
+                result.textContent = `${inputValue} no es un palíndromo`;
+                result.classList.add('not-palindrome');
+            }
+        }
+
+        // Add event listeners
+        checkBtn.addEventListener('click', validarPalindrome);
+
+        // Allow Enter key to trigger check
+        textInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                validarPalindrome();
+            }
+        });
+
+        // Focus on input when page loads
+        window.addEventListener('load', function() {
+            textInput.focus();
+        });
+    </script>
+</body>
+</html>
