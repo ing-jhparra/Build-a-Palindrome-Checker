@@ -1,8 +1,6 @@
-Proyecto del curso [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/) de la plataforma FreeCodeCamp.
+Proyecto del curso [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/) de la plataforma [FreeCodeCamp](https://www.freecodecamp.org/)
 
-### Aprende ethereum de la mano de Ethkipu & Henry
-
-El proyecto
+# El proyecto
 
 # Build-a-Palindrome-Checker
 

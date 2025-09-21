@@ -145,7 +145,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>🔄 Verificador de palíndromos</h1>
+        <h1>↔️ Es Palíndromo ?</h1>
         <p class="subtitle">
             ¡Introduce una palabra o frase para comprobar si se lee igual de adelante hacia atrás y de atrás hacia adelante!
         </p>
@@ -184,7 +184,7 @@
 
         function esPalindrome(str) {
           
-            // Limpiamos la entrada de signos de puntuación, espacios y simbolos y convertimos a minúsculas
+            // Limpia la entrada de signos de puntuación, espacios y simbolos y convertimos a minúsculas
             const strLimpio = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
             const strAlreves = strLimpio.split('').reverse().join('');
 
